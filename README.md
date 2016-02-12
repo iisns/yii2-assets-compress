@@ -28,4 +28,21 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \iisns\assets\AutoloadExample::widget(); ?>```
+//App config
+[
+    'bootstrap'    => ['assetsCompress'],
+    'components'    => [
+    //....
+        'assetsAutoCompress' =>
+        [
+            'class' => '\iisns\assets\AssetsCompressComponent',
+            'enabled'           => true,
+            'jsCompress'        => true,
+            'cssFileCompile'    => true,
+            'jsFileCompile'     => true,
+        ],
+    //....
+    ]
+]
+
+```
